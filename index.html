@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		  *{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.main1{
+				perspective: 1000px;
+				transform-style: preserve-3d;
+			}
+			.shaizi{
+				width: 200px;
+				height: 200px;
+			    display: inline-block;
+				margin: 100px 50px;
+				position: relative;
+				left: 200px;
+				transition: all 5s;
+				transform-style: preserve-3d;
+			}
+			.shaizi div{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*opacity透明度设置：完全透明是0，完全不透明是1*/
+				
+				border: 1px solid #ccc;
+				transition: all 5s;
+			}
+			
+			.div1{
+				background-color: skyblue;
+				background-size:  100% 100%;
+				transform: translatez(100px);
+				
+				
+			}
+			.div2{
+				background-color: salmon;
+				background-size:  100% 100%;
+				transform: rotateY(180deg) translatez(100px);
+				
+			}
+			.div3{
+				background-color: chartreuse;
+				background-size:  100% 100%;
+				transform: rotateY(90deg) translatez(100px);
+				
+				
+			}
+			.div4{
+				background-color: plum;
+				background-size:  100% 100%;
+				transform: rotateY(-90deg) translatez(100px);
+				
+			}
+			.div5{
+				background-color: orange;
+				background-size:  100% 100%;
+				transform: rotateX(90deg) translatez(100px);
+				
+			}
+			.div6{
+				background-color: red;
+				background-size:  100% 100%;
+				transform: rotateX(-90deg) translatez(100px);
+				
+			}
+			.main1:hover .shaizi{
+				transform:  rotate3d(50,50,50,360deg) translate3d(200px,200px,200px);
+												
+			}
+			
+			.main1:hover .div1{
+				transform:  translatez(200px);
+				opacity: 0.6;
+			}
+			.main1:hover .div2{
+				transform:rotateY(180deg)  translatez(200px);
+				opacity: 0.6;
+			}
+			.main1:hover .div3{
+				transform: rotateY(90deg) translatez(200px);
+				opacity: 0.6;
+			}
+			.main1:hover .div4{
+				transform:rotateY(-90deg)  translatez(200px);
+				opacity: 0.6;
+			}
+			.main1:hover .div5{
+				transform:rotateX(90deg) translatez(200px);
+				opacity: 0.6;
+			}
+			.main1:hover .div6{
+				transform:   rotateX(-90deg) translatez(200px);
+				opacity: 0.6;
+			}
+			h1{
+				font-size: 100px;
+				text-align: center;
+				margin: 37px;								
+			}
+			.main1:hover h1{
+				transform: font-size: 50px;
+				text-align: center;
+				margin: 37px;	
+				font-weight: 500;
+				color: whitesmoke;
+				text-shadow: 10px 10px 10px saddlebrown;
+			}
+			
+			.mofang{
+				width: 100px;
+				height: 100px;
+				display: inline-block;
+				margin: 150px auto;
+				position: relative;
+				transition: all 5s;
+				transform-style: preserve-3d;
+			}
+			.mofang div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*opacity透明度设置：完全透明是0，完全不透明是1*/
+				
+				border: 1px solid #ccc;
+				transition: all 5s;
+			}
+			
+			.front{
+				background: url(img/1.png);
+				background-size:  100% 100%;
+				transform: translateZ(0px);
+			}
+			.back{
+				background: url(img/2.jpg) ;
+				background-size:  100% 100%;
+				/*transform: translateZ(-100px);*/
+				transform: rotateY(0deg) translateZ(0px);
+			}
+			.left{
+				background: url(img/3.jpg) ;
+				background-size:  100% 100%;
+				transform: rotateY(0deg) translateZ(0px);
+			}
+			.right{
+				background: url(img/4.jpeg) ;
+				background-size:  100% 100%;
+				transform: rotateY(0deg) translateZ(0px);
+			}
+			.top{
+				background: url(img/5.jpeg) ;
+				background-size:  100% 100%;
+				transform: rotateX(0deg) translateZ(0px);
+			}
+			.bottom{
+				background: url(img/6.jpg);
+				background-size:  100% 100%;
+				transform: rotateX(0deg) translateZ(0px);
+			}
+			
+			.main1:hover .mofang{
+				transform:  rotate3d(10,10,10,360deg) translate3d(200px,200px,200px);
+				
+			
+			}
+			.main1:hover .front{
+				transform:  translatez(50px);
+			}
+			.main1:hover .back{
+				transform:rotateY(180deg)  translatez(50px);
+			}
+			.main1:hover .left{
+				transform: rotateY(90deg) translatez(50px);
+			}
+			.main1:hover .right{
+				transform:rotateY(-90deg)  translatez(50px);
+			}
+			.main1:hover .top{
+				transform:rotateX(90deg) translatez(50px);
+			}
+			.main1:hover .bottom{
+				transform:   rotateX(-90deg) translatez(50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main1">
+			<div class="shaizi">
+				<div class="div1">
+					<h1>1</h1>
+				</div>
+				<div class="div2">
+					<h1>2</h1>
+				</div>
+				<div class="div3">
+					<h1>3</h1>
+				</div>
+				<div class="div4">
+					<h1>4</h1>
+				</div>
+				<div class="div5">
+					<h1>5</h1>
+				</div>
+				<div class="div6">
+					<h1>6</h1>
+				</div>
+			</div>
+		    <div class="mofang">
+		    	<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+		    </div>
+		</div>
+	</body>
+</html>
